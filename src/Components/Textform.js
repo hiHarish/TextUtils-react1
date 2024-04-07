@@ -84,7 +84,7 @@ function changemode() {
   <button type="submit" className="btn btn-primary mx-3" onClick={locase} style={Btncolor}>To Lowerercase</button>
   <button type="submit" className="btn btn-primary " onClick={clr} style={Btncolor}>Clear All</button>
   <button type="submit" className="btn btn-primary mx-3" onClick={copy} style={Btncolor}>copy</button>
-  <p>{text.split(" ").length} words and {text.length} letters</p>
+  <p>{text.split(" ").filter((element)=>{return element.length!=0}).length} words and {text.length} letters</p>
   <h3>Preview</h3>
   <p>{text.length>0?text:'Enter some text to preview'}</p>
   </div>
